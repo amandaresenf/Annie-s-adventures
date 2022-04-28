@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,8 +33,8 @@ public class ItensPicker : MonoBehaviour { // Nome da Classe
 
     private void Update()
     {
-        scoreText.text = "Itens: "+Itens.ToString();
-        liveText.text = "Life: "+live.ToString();
+        scoreText.text = "Itens coletados: "+Itens.ToString();
+        liveText.text = "Status de vida: "+live.ToString();
         UpdateHealthBar();
        
     }
@@ -53,6 +53,7 @@ public class ItensPicker : MonoBehaviour { // Nome da Classe
               lifeSound.Play(); //Som de dor
               //GetComponent<AudioSource>().Play();  
               live -= 1; //Decrementa a vida
+              if (live==0)SceneManager.LoadScene("GameOver");
               Destroy(collision.gameObject); //Destroi o fogo
               ScriptController.userLife=live;
               ScriptController.carregaHistoria();

@@ -10,6 +10,9 @@ public class ButtonClick : MonoBehaviour
     public void Click()
     {
          SceneManager.LoadScene(Fase);
+	   ScriptController.userPoints=0;
+	   ScriptController.userLife=10;
+
     }
     public void Exit(){
       Application.Quit();  

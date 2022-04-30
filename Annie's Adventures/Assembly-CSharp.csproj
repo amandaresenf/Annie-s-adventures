@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ScriptController.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow2D.cs" />
+    <Compile Include="Assets\Scripts\TimerCena.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/danie/Downloads/Annie-s-adventures/Annie's Adventures/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

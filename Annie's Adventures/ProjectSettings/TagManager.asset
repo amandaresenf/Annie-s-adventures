@@ -8,6 +8,7 @@ TagManager:
   - Itens
   - Fase
   - Item
+  - InimigoMortal
   layers:
   - Default
   - TransparentFX

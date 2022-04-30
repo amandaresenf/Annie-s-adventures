@@ -48,12 +48,23 @@ public class ItensPicker : MonoBehaviour { // Nome da Classe
               Destroy(collision.gameObject); //Peguei a moeda destroi a moeda
               ScriptController.userPoints=Itens;
           }
-          if(collision.CompareTag("Inimigo") == true)//Essa condição verifica se o player encostou com um objeto com rotulo Fire
+          
+	  if(collision.CompareTag("Inimigo") == true)//Essa condição verifica se o player encostou com um objeto com rotulo Fire
           {
               lifeSound.Play(); //Som de dor
               //GetComponent<AudioSource>().Play();  
               live -= 1; //Decrementa a vida
-              if (live==0)SceneManager.LoadScene("GameOver");
+              if (live<=0)SceneManager.LoadScene("GameOver");
+              Destroy(collision.gameObject); //Destroi o fogo
+              ScriptController.userLife=live;
+              ScriptController.carregaHistoria();
+          }
+          if(collision.CompareTag("InimigoMortal") == true)//Essa condição verifica se o player encostou com um objeto com rotulo Fire
+          {
+              lifeSound.Play(); //Som de dor
+              //GetComponent<AudioSource>().Play();  
+              live -= 10; //Decrementa a vida
+              if (live<=0)SceneManager.LoadScene("GameOver");
               Destroy(collision.gameObject); //Destroi o fogo
               ScriptController.userLife=live;
               ScriptController.carregaHistoria();

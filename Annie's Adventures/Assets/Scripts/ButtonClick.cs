@@ -14,6 +14,10 @@ public class ButtonClick : MonoBehaviour
 	   ScriptController.userLife=10;
 
     }
+    public void PularCena()
+    {
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
     public void Exit(){
       Application.Quit();  
       UnityEditor.EditorApplication.isPlaying = false;  

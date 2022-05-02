@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\ScriptController.cs" />
      <Compile Include="Assets\Scripts\SmoothFollow2D.cs" />
      <Compile Include="Assets\Scripts\TimerCena.cs" />
+     <None Include="Assets\Sounds\8Bit Music Album - 051321\Notes.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/danie/Downloads/Annie-s-adventures/Annie&apos;s Adventures/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
